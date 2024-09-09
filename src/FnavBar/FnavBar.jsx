@@ -12,13 +12,6 @@ const FnavBar = () => {
       <Row className=" d-flex justify-content-center align-items-center"
       style={{minWidth:"100%",minHeight:"25vh"}}>
         
-        
-        
-        
-        
-        
-        
-        
         <Col
           xl={4}
           lg={4}
@@ -33,30 +26,10 @@ const FnavBar = () => {
             type="search"
             className="input"
             name="search"
-            placeholder="search"
+            placeholder="Search"
           />
           
         </Col>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <Col
           xl={4}
@@ -83,7 +56,7 @@ const FnavBar = () => {
           align-items-center"
           
         >
-          <a className="account" href="#">
+          <a className="account me-2" href="#">
             My Account
           </a>
           <FontAwesomeIcon className="BagShopping" icon={faBagShopping} />
