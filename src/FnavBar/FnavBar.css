@@ -1,25 +1,21 @@
-.secondd-nav{
-     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 80px;
-}
 
 
-.div-search{
+.search{
     position: relative;
     
 }
 
 .Search-icon{
     position: absolute;
-    left: 0;
-    top: 5px;
+    left: 4px;
+    top: -7px;
 }
 
 .input{
     outline: none;
+    background-color: rgb(247, 230, 230);
     border: none;
+    border-radius: 30px;
     text-indent: 15px;
     color: black;
     padding: 5px;
@@ -34,9 +30,9 @@
 
 
 .border-bottom-hr {
-  border-bottom: 1px solid #242323c7; /* The border color */
-  width: calc(100% - 160px); /* Adjust to match the padding of .secondd-nav */
-  margin: 20px auto; /* Center it horizontally */
+  border-bottom: 1px solid #242323c7;
+  width: calc(100% - 160px); 
+  margin: 20px auto; 
 }
 
 

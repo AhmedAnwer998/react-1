@@ -4,34 +4,101 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import img02 from "../images/img02.svg";
+import "bootstrap/dist/css/bootstrap.css";
+import { Container, Row, Col } from "react-bootstrap";
 const FnavBar = () => {
   return (
-    <div className="second-nav">
-
-      <div className="secondd-nav">
-
-        <div className="div-search">
-
-          <label htmlFor="search"></label>
+    <Container fluid >
+      <Row className=" d-flex justify-content-center align-items-center"
+      style={{minWidth:"100%",minHeight:"25vh"}}>
+        
+        
+        
+        
+        
+        
+        
+        
+        <Col
+          xl={4}
+          lg={4}
+          md={6}
+          sm={12}
+          xs={12}
+          className="  d-flex justify-content-center align-items-center"
+          
+        >
+          <label htmlFor="search" className="search"><FontAwesomeIcon className="Search-icon" icon={faSearch} /></label>
           <input
             type="search"
             className="input"
             name="search"
             placeholder="search"
           />
-          <FontAwesomeIcon className="Search-icon" icon={faSearch} />
-        </div>
+          
+        </Col>
 
-        <img src={img02} alt="img02" />
-        <div>
-          <a className="account" href="#">My Account</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <Col
+          xl={4}
+          lg={4}
+          md={6}
+          sm={12}
+          xs={12}
+          className=" d-flex
+          justify-content-center
+          align-items-center"
+          
+        >
+          <img src={img02} alt="img02" />
+        </Col>
+
+        <Col
+          xl={4}
+          lg={4}
+          md={12}
+          sm={12}
+          xs={12}
+          className="   d-flex
+          justify-content-center
+          align-items-center"
+          
+        >
+          <a className="account" href="#">
+            My Account
+          </a>
           <FontAwesomeIcon className="BagShopping" icon={faBagShopping} />
           <sup>0</sup>
-        </div>
-      </div>
-
-      <div className="border-bottom-hr"></div>
-    </div>
+        </Col>
+        <Col
+          xl={12}
+          lg={12}
+          md={12}
+          sm={12}
+          xs={12}
+          className="border-bottom-hr"
+        ></Col>
+      </Row>
+    </Container>
   );
 };
 
