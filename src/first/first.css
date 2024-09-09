@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-pink{
+  width: 100%;
+  min-height: 100px;
+}
+
+.btn1 {
+  background-color: #ffdad9;
+  border: none;
+
+  padding: 0;
+  cursor: pointer;
+}
+
+
+.icon {
+ 
+  
+
+  font-size: 11px;
+}
