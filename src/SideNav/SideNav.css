@@ -1,0 +1,37 @@
+.alink {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000;
+  display: block;
+  transition: background-color 0.8s, color 0.8s;
+  position: relative;
+}
+
+.alink:hover {
+  color: #f1f1f1;
+  background-color: #818181;
+  width: 100vw; /* Expand to full viewport width */
+  margin-left: -32px; /* Adjust for the padding to take the whole width */
+}
+
+.list-1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.line {
+  width: 35px;
+  height: 4px;
+  margin: 4px 0;
+  transition: 0.7s;
+}
+
+.first-line {
+  border-bottom: 3px solid black;
+}
+
+.second-line {
+  border-bottom: 1px solid black;
+}
