@@ -5,31 +5,38 @@
 }
 
 .fSec-1 {
-  background: url("../images/flowers.jpg");
+  background: url("../images/flowers.jpg") top center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 80vh;
   position: relative;
   max-width: 95%;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  overflow: hidden;
+  padding-right: 5%;
+  padding-left: 5%; /* Add some padding to keep the text away from the screen edge */
 }
 
 .content-bg {
   font-style: italic;
-  max-width: 80vh;
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  transform: translate(-10%, -50%);
+  position: relative;
+  max-width: 60%; /* Limit the content width */
+  text-align: left; /* Align text to the left */
+  padding: 20px;
 }
+
 .content-bg > h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 100px;
-  letter-spacing: -7px;
+  font-size: 6vw; /* Make the font-size responsive */
+  letter-spacing: -2px;
+  margin-bottom: 20px;
 }
 
 .content-bg > p {
-  font-size: 18px;
+  font-size: 2vw; /* Make the font-size responsive */
 }
 
 .mySwiper {
@@ -40,30 +47,53 @@
   max-width: 350px;
   display: flex;
   justify-content: center;
-  text-align: center;
   align-items: center;
   border: 1px solid black;
-  position: relative;
   border-radius: 50px;
   color: black;
 }
 
+/* Adjust slide text */
 .swiper-txt {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   color: black;
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .content-bg > h1 {
+    font-size: 7vw;
+  }
+
+  .content-bg > p {
+    font-size: 3vw;
+  }
+}
+
 @media (max-width: 768px) {
+  .content-bg > h1 {
+    font-size: 8vw;
+  }
+
+  .content-bg > p {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 576px) {
   .fSec-1 {
-    background: url("../images/flowers.jpg");
+    min-height: 70vh;
     background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    position: relative;
-    max-width: 100vh;
+  }
+
+  .content-bg > h1 {
+    font-size: 10vw;
+  }
+
+  .content-bg > p {
+    font-size: 5vw;
   }
 }

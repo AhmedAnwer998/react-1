@@ -17,7 +17,7 @@ const FirstSection = () => {
   return (
     <Container className="fSec-1">
       <Row>
-        <Col className="content-bg" xl={12} lg={12} md={12} sm={12} xs={12}>
+        <Col className="content-bg" xl={12} lg={12} md={6} sm={6} xs={6}>
           <h1>It's Almost Mom's Day</h1>
           <p>Celebrate Mom with Beutiful flowers</p>
           <Swiper
