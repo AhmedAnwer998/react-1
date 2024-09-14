@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   min-height: 80vh;
   position: relative;
-  min-width: 90%;
+  max-width: 95%;
 }
 
 .content-bg {
@@ -41,10 +41,9 @@
   display: flex;
   justify-content: center;
   text-align: center;
-
   align-items: center;
   border: 1px solid black;
-position: relative;
+  position: relative;
   border-radius: 50px;
   color: black;
 }
@@ -58,3 +57,13 @@ position: relative;
   color: black;
 }
 
+@media (max-width: 768px) {
+  .fSec-1 {
+    background: url("../images/flowers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    max-width: 100vh;
+  }
+}
