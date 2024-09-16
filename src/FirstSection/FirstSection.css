@@ -10,12 +10,10 @@
   background-repeat: no-repeat;
   min-height: 80vh;
   position: relative;
-  max-width: 95%;
   display: flex;
   justify-content: flex-start; /* Align content to the left */
   align-items: center;
   overflow: hidden;
-  padding-right: 5%;
   padding-left: 5%; /* Add some padding to keep the text away from the screen edge */
 }
 
@@ -37,29 +35,6 @@
 
 .content-bg > p {
   font-size: 2vw; /* Make the font-size responsive */
-}
-
-.mySwiper {
-  text-align: center;
-  font-size: 20px;
-  height: 70px;
-  padding: 20px;
-  max-width: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  border-radius: 50px;
-  color: black;
-}
-
-/* Adjust slide text */
-.swiper-txt {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: black;
 }
 
 /* Media queries for responsiveness */
@@ -95,5 +70,122 @@
 
   .content-bg > p {
     font-size: 5vw;
+  }
+}
+
+/* Styling for pagination dots */
+/* Base style for the button */
+.small-swiper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  height: 7vh;
+  background-color: white;
+  border-radius: 50px;
+  color: black;
+  font-size: 1.2vw; /* Use vw for responsive text size */
+  text-align: center;
+  position: relative;
+  border: none;
+  gap: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.small-swiper:active {
+  background-color: #f0f0f0; /* Button color changes when clicked */
+  transform: scale(0.95); /* Button shrinks on click */
+}
+
+.icon2 {
+  font-size: 1vw; /* Responsive icon size */
+}
+
+/* Pagination dots */
+.pagination-dots {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: black;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+  .small-swiper {
+    width: 25vw;
+    height: 6vh;
+    font-size: 1.5vw;
+  }
+
+  .icon2 {
+    font-size: 1.2vw;
+  }
+
+  .pagination-dots {
+    gap: 8px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .small-swiper {
+    width: 40vw;
+    height: 5.5vh;
+    font-size: 3vw;
+  }
+
+  .icon2 {
+    font-size: 2.5vw;
+  }
+
+  .pagination-dots {
+    gap: 6px;
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+@media (max-width: 576px) {
+  .small-swiper {
+    width: 50vw;
+    height: 5vh;
+    font-size: 4vw;
+  }
+
+  .icon2 {
+    font-size: 3vw;
+  }
+
+  .pagination-dots {
+    margin-top: 5px;
+    gap: 4px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
   }
 }
