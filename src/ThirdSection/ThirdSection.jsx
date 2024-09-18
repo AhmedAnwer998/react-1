@@ -18,11 +18,11 @@ const ThirdSection = () => {
   return (
     <Container className="cont-3">
       <Row className="row-cont-3">
-        <Col className="col-cont-3" xl={4} lg={4} md={6} sm={12} xs={12}>
+        <Col className="col-cont-3" xl={4} lg={6} md={6} sm={12} xs={12}>
           <img src={img07} alt="img07" className="img-3" />
         </Col>
 
-        <Col className="col-2-cont-3" xl={4} lg={4} md={6} sm={12} xs={12}>
+        <Col className="col-2-cont-3" xl={4} lg={6} md={6} sm={12} xs={12}>
           <p>BROWSE BY OCCASSIONS</p>
           <h1>Anniversary</h1>
           <h1>Birthday</h1>
@@ -36,9 +36,9 @@ const ThirdSection = () => {
         </Col>
 
         <Col
-          className="d-flex justify-content-md-center align-items-md-center justify-content-sm-center align-items-sm-center col-3-cont-3"
+          className=" col-3-cont-3"
           xl={4}
-          lg={4}
+          lg={12}
           md={12}
           sm={12}
           xs={12}
