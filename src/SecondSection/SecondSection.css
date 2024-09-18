@@ -50,39 +50,34 @@
 
 .img05 {
   border-radius: 500px 500px 0 0;
-  max-width: 41%;
-  height: auto;
+  max-width: 39%; /* Allow image to scale responsively */
+  height: auto; /* Maintain aspect ratio */
 }
 
 @media (max-width: 1200px) {
   .img05 {
-
-    max-width: 49%;
-    height: auto; /* Maintain aspect ratio */
+    max-width: 48%; /* Adjust for medium screens */
   }
 }
 
 @media (max-width: 991px) {
-  
   .img05 {
-    max-width: 43%;
-        
-
+    max-width: 43%; /* Adjust for smaller screens */
   }
 }
 
 @media (max-width: 768px) {
   .img05 {
-    max-width: 58%;
+    max-width: 57%; /* Further adjust for smaller screens */
   }
 }
 
 @media (max-width: 576px) {
-    .col2-row-cont-2 {
-      min-height: 70vh;
-    }
+  .col2-row-cont-2 {
+    max-height: 70vh;
+  }
   .img05 {
-    max-width: 40%;
+    max-width: 57%; /* Final adjustment for mobile screens */
   }
 
   .btn3 {
