@@ -50,38 +50,39 @@
 
 .img05 {
   border-radius: 500px 500px 0 0;
-  max-width: 100%;
+  max-width: 41%;
   height: auto;
 }
 
 @media (max-width: 1200px) {
   .img05 {
-    width: 240px;
+
+    max-width: 49%;
     height: auto; /* Maintain aspect ratio */
   }
 }
 
 @media (max-width: 991px) {
-  .col2-row-cont-2 {
-    justify-content: center;
-    align-items: end;
-  }
+  
   .img05 {
-    width: 220px;
-        margin-bottom: 5px;
+    max-width: 43%;
+        
 
   }
 }
 
 @media (max-width: 768px) {
   .img05 {
-    width: 180px;
+    max-width: 58%;
   }
 }
 
 @media (max-width: 576px) {
+    .col2-row-cont-2 {
+      min-height: 70vh;
+    }
   .img05 {
-    width: 150px;
+    max-width: 40%;
   }
 
   .btn3 {
