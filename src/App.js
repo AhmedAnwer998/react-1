@@ -5,6 +5,7 @@ import SecondNav from "./SecondNav/SecondNav.jsx";
 import FirstSection from "./FirstSection/FirstSection.jsx";
 import SecondSection from "./SecondSection/SecondSection.jsx";
 import ThirdSection from "./ThirdSection/ThirdSection.jsx";
+import ForthSection from "./ForthSection/ForthSection.jsx";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <FirstSection />
       <SecondSection />
       <ThirdSection />  
+      <ForthSection />  
     </div>
   );
 };

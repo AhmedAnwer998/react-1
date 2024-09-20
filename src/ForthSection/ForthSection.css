@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.cont-4 {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.col-cont-4 {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scroller {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.scroll {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: calc(200%); /* This ensures that we have enough width for seamless scrolling */
+}
+
+.scroll li {
+  margin-right: 27px;
+  list-style-type: none; /* Ensure no default list styling */
+}
+
+.scroll li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+.imgGr {
+  width: 100%;
+  height: auto;
+}
+
+/* Infinite scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Scroll left by half the width of the duplicated items */
+  }
+}
+
+/* Adding the white blurred effect on both sides of the scroller */
+.scroller::before,
+.scroller::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px; /* Adjust width of blur */
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scroller::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.scroller::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
