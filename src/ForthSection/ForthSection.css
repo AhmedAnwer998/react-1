@@ -27,12 +27,14 @@
 .scroll {
   display: flex;
   animation: scroll 20s linear infinite;
-  width: calc(200%); /* This ensures that we have enough width for seamless scrolling */
+  width: calc(200% ); /* This ensures that we have enough width for seamless scrolling */
+      list-style-type: none;
+
 }
 
 .scroll li {
-  margin-right: 27px;
-  list-style-type: none; /* Ensure no default list styling */
+  margin-right: 30px;
+  /* list-style-type: none;  */
 }
 
 .scroll li:last-child {
@@ -47,10 +49,12 @@
 /* Infinite scrolling animation */
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(-50%); /* Scroll left by half the width of the duplicated items */
+    transform: translateX(
+      0
+    ); /* Scroll left by half the width of the duplicated items */
   }
 }
 
@@ -68,10 +72,95 @@
 
 .scroller::before {
   left: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .scroller::after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+}
+
+/* ForthSection.css */
+
+/* Your existing CSS here... */
+
+.scroller::before,
+.scroller::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px; /* Adjust width of blur */
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.scroller::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.scroller::after {
+  right: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1)
+  );
+}
+
+/* Remove shadows and scrolling effect on mobile */
+
+
+@media (max-width: 768px) {
+  .scroller::before,
+  .scroller::after {
+    display: none; /* Remove side shadows on mobile */
+  }
+  .no-scroll {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: none;
+    list-style-type: none;
+
+  }
+  .no-scroll li {
+    margin-right: 0; /* Ensure no right margin on mobile */
+    margin-top: 10px;
+
+  }
+  .no-scroll li:last-child {
+    margin-bottom: 0; /* Remove any bottom margin for the last image */
+  }
+  .imgGr {
+    opacity: 0; /* Start hidden */
+    transition: opacity .5s ease; /* Fade-in effect */
+        border-radius: 25px;
+        box-shadow: 5px 5px 5px 2px rgb(199, 199, 199);
+
+  }
+  
+.animate__animated {
+  opacity: 1 !important; /* Make visible when animated */
+}
+  .animate__fadeInLeftBig,
+  .animate__fadeInRightBig {
+    opacity: 1; /* Show the image */
+  }
 }
