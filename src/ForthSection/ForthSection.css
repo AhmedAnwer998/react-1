@@ -152,7 +152,7 @@
     margin-bottom: 0; /* Remove any bottom margin for the last image */
   }
   .imgGr {
-    width: 100%;
+    width: 90%;
     opacity: 0; /* Start hidden */
     transition: opacity 0.5s ease; /* Fade-in effect */
     border-radius: 25px;
