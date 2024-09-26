@@ -27,9 +27,8 @@
 .scroll {
   display: flex;
   animation: scroll 20s linear infinite;
-  width: calc(200% ); /* This ensures that we have enough width for seamless scrolling */
-      list-style-type: none;
-
+  width: calc(200%); /* This ensures that we have enough width for seamless scrolling */
+  list-style-type: none;
 }
 
 .scroll li {
@@ -123,42 +122,46 @@
 
 /* Remove shadows and scrolling effect on mobile */
 
-
 @media (max-width: 768px) {
   .scroller::before,
   .scroller::after {
     display: none; /* Remove side shadows on mobile */
   }
-  .no-scroll {
+  .scroller {
     width: 100%;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .no-scroll {
+ padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     animation: none;
     list-style-type: none;
-
   }
   .no-scroll li {
-    margin-right: 0; /* Ensure no right margin on mobile */
-    margin-top: 10px;
+    margin: 10px 0;
 
   }
   .no-scroll li:last-child {
     margin-bottom: 0; /* Remove any bottom margin for the last image */
   }
   .imgGr {
+    width: 100%;
     opacity: 0; /* Start hidden */
-    transition: opacity .5s ease; /* Fade-in effect */
-        border-radius: 25px;
-        box-shadow: 5px 5px 5px 2px rgb(199, 199, 199);
-
+    transition: opacity 0.5s ease; /* Fade-in effect */
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px 2px rgb(199, 199, 199);
   }
-  
-.animate__animated {
-  opacity: 1 !important; /* Make visible when animated */
-}
+
+  .animate__animated {
+    opacity: 1 !important; /* Make visible when animated */
+  }
   .animate__fadeInLeftBig,
   .animate__fadeInRightBig {
     opacity: 1; /* Show the image */

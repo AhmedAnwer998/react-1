@@ -6,7 +6,7 @@ import FirstSection from "./FirstSection/FirstSection.jsx";
 import SecondSection from "./SecondSection/SecondSection.jsx";
 import ThirdSection from "./ThirdSection/ThirdSection.jsx";
 import ForthSection from "./ForthSection/ForthSection.jsx";
-// import FifthSection from "./FifthSection/FifthSection.jsx";
+import FifthSection from "./FifthSection/FifthSection.jsx";
 
 const App = () => {
   return (
@@ -18,7 +18,7 @@ const App = () => {
       <SecondSection />
       <ThirdSection />  
       <ForthSection />  
-      {/* <FifthSection /> */}
+      <FifthSection />
     </div>
   );
 };

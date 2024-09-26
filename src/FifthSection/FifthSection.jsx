@@ -1,49 +1,41 @@
-import React, {useState, useEffect} from 'react'
-import img14 from "../images/img14.jpg";
-import img16 from "../images/img16.jpg";
-import img18 from "../images/img18.jpg";
-import img19 from "../images/img19.jpg";
-import img10 from "../images/img10.jpg";
-import { ClassNames } from '@emotion/react';
-
-
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import { Container, Row, Col } from "react-bootstrap";
+import "./FifthSection.css";
+import img21 from "../images/img21.jpg";
+import img22 from '../images/img22.jpg';
+import img23 from "../images/img23.jpg";
 
 
 const FifthSection = () => {
-
-
-
-const images = [img14, img16, img18, img19, img10];
-
-const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-
-useEffect(()=>{
-const handleResize = ()=>{
-  setIsMobile(window.innerWidth < 768);
-}
-window.addEventListener('resize', handleResize)
-return ()=>{
-  window.removeEventListener('resize', handleResize)
-  }
-}, [])
-
-
-
-
-
-
-
-
-
-
   return (
-    <>
-        <div className='animation-1  animation-2'></div>
-        
+    <Container className="cont-5">
+      <Row className="row-5">
+        <Col className="cont-5-col-5">
+          <p>DON'T MISS</p>
+          <h1>Flowers Collection</h1>
 
-    </>
-  )
-}
+          <div className="images-cont-5">
+            <div>
+              <img src={img21} alt="img21" />
+              <h2>Classics Collection</h2>
+            </div>
 
-export default FifthSection
+            <div>
+              <img src={img22} alt="img22" />
+              <h2>Spring Collection</h2>
+            </div>
+
+            <div>
+              <img src={img23} alt="img23" />
+              <h2>Growers Collection</h2>
+            </div>
+            
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default FifthSection;
