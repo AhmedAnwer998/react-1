@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.cont-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.row-7 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.col-1-7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.col-1-7 > img {
+  width: 100%;
+}
+
+.col-1-7 > h3 {
+  margin: 5px 0;
+  font-size: 1em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.col-1-7 > p {
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.col-2-7 {
+  position: relative;
+}
+
+.text-7 {
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+}
+
+.div-7 > img {
+  width: 100%;
+}
+
+.text-7 > p:first-child {
+  text-align: center;
+  border-radius: 5px;
+  background-color: #e285a3;
+  width: 120px;
+  color: white;
+  font-size: 0.8em;
+}
+.text-7 > h1 {
+  font-family: "Tangerine", serif;
+  color: #e285a3;
+  font-size: 3.3em;
+}
+.text-7 > h2 {
+  font-size: 2.5em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  transform: scaleY(1.6);
+}
+.text-7 > button {
+  background-color: white;
+  font-size: 0.7em;
+  border-radius: 50px;
+  width: 100px;
+  padding: 5px 7px;
+  transition: transform 0.2s;
+  font-weight: 600;
+  border: none;
+  box-shadow: 2px 2px 1px rgb(211, 211, 211);
+}
+.text-7 > button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 991px) {
+  .col-1-7 > img {
+    width: 80%;
+  }
+  .col-2-7 {
+    position: static;
+  }
+
+  .text-7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
+  .text-7 > p:first-child {
+    font-size: 0.7em;
+  }
+  .text-7 > h2 {
+    font-size: 1.3em;
+  }
+  .text-7 > h1 {
+    font-size: 2.3em;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-7 > h2 {
+    font-size: 1em;
+  }
+  .text-7 > h1 {
+    font-size: 1.9em;
+  }
+  .text-7 > p:first-child {
+    font-size: 0.6em;
+  }
+}
